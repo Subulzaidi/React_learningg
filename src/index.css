@@ -56,3 +56,19 @@ body {
   width: 100vw;
   height: 20vh;
 }
+#deltebtn
+{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  color: black;
+  font-size: small;
+  background: white;
+}
+div.deltebtn{
+  display: flex;
+  justify-content:end ;
+}
+button:hover{
+  cursor: pointer;
+}
