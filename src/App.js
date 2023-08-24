@@ -49,32 +49,33 @@ const App = () => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
+  console.log("Submitted")};
     return (
       <div className="container">
         <Heading />
         <form type="submit" onSubmit={handleSubmit} className="data">
           <input
             className="box inputs"
-            placeholder="Enter the Name 🤌"
+            placeholder="Enter the Name "
             onChange={NewName}
             value={name}
           />
           <input
             type="number"
             className="box inputs"
-            placeholder="Enter the Age 🤌"
+            placeholder="Enter the Age "
             onChange={Newage}
             value={age}
           />
           <input
             className="box inputs"
-            placeholder="Enter the Status 🤌"
+            placeholder="Enter the Status "
             onChange={NewStatus}
             value={status}
           />
         </form>
         <div id="btn">
-          <button className="box btns" onClick={addElementInListArr}>
+          <button type="submit" className="box btns" onClick={addElementInListArr}>
             Add ELE
           </button>
         </div>
@@ -100,6 +101,5 @@ const App = () => {
       </div>
     );
   };
-};
 
 export default App;
