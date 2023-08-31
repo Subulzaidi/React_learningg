@@ -1,105 +1,68 @@
 import React, { useState } from "react";
 import Heading from "./App/heading";
-
 const data = [
-  // { id: 1, name: "hadi", age: "23", status: "developer" },
-  "+",
+  {
+    id: new Date(),
+    task: "My task",
+  },
 ];
-const initialVal = {
-  name: "",
-  status: "",
-  age: "",
+const initalVal = {
+  task: "",
 };
+
 const App = () => {
-  const [list, setlist] = useState(data);
-  const [name, setName] = useState("");
-  const [status, setStatus] = useState("");
-  const [age, setAge] = useState("");
-
-  const addElementInListArr = () => {
-    if (name === "" || age === 0 || status === "") {
-      alert("You forget to fill all the fields!!!");
+  const [arr, setarr] = useState(data);
+  const [task, setTask] = useState("");
+  const addNewTAsk = () => {
+    if (task === "") {
+      alert("Invalid Input!");
     } else {
-      const newPerson = {
+      const newData = {
         id: new Date(),
-        name,
-        age,
-        status,
+        task,
       };
-
-      setlist([...list, newPerson]);
-      setAge(initialVal.age);
-      setName(initialVal.name);
-      setStatus(initialVal.status);
+      setarr([...arr, newData]);
+      setTask(initalVal.task);
     }
   };
+  const NewTask = (inputProp) => {
+    setTask(inputProp.target.value);
+  };
+
   const deleteElement = (id) => {
-    const updatedList = list.filter((x) => x.id !== id);
-    setlist(updatedList);
+    let updatearr = arr.filter((x) => x.id !== id);
+    setarr(updatearr);
   };
-
-  const NewName = (inputProp) => {
-    setName(inputProp.target.value);
-  };
-  const Newage = (inputProp) => {
-    setAge(inputProp.target.value);
-  };
-  const NewStatus = (inputProp) => {
-    setStatus(inputProp.target.value);
-  };
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  console.log("Submitted")};
-    return (
-      <div className="container">
-        <Heading />
-        <form type="submit" onSubmit={handleSubmit} className="data">
-          <input
-            className="box inputs"
-            placeholder="Enter the Name "
-            onChange={NewName}
-            value={name}
-          />
-          <input
-            type="number"
-            className="box inputs"
-            placeholder="Enter the Age "
-            onChange={Newage}
-            value={age}
-          />
-          <input
-            className="box inputs"
-            placeholder="Enter the Status "
-            onChange={NewStatus}
-            value={status}
-          />
-        </form>
-        <div id="btn">
-          <button type="submit" className="box btns" onClick={addElementInListArr}>
-            Add ELE
-          </button>
-        </div>
-
-        {list.map((x) => {
-          return (
-            <div className="box">
-              {" "}
-              {x.name} - {x.status} - {x.age}
-              {"   "}
-              <div className="deltebtn">
-                <button
-                  id="deltebtn"
-                  type="remove"
-                  onClick={() => deleteElement(x.id)}
-                >
-                  Delete
-                </button>
-              </div>
-            </div>
-          );
-        })}
+  return (
+    <div className="container">
+      <Heading />
+      <div className="inputbox">
+        <input
+          className="IN"
+          placeholder="Add something to do"
+          onChange={NewTask}
+          value={task}
+        />
+        <button type="submit" onClick={addNewTAsk}>
+          save
+        </button>
       </div>
-    );
-  };
+
+      {arr.map((x) => {
+        return (
+          <div className="box">
+            <input type="checkbox" />
+            {x.task}
+            <div className="deltebtn">
+              <button type="remove" onClick={() => deleteElement(x.id)}>
+                Remove
+              </button>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
 export default App;

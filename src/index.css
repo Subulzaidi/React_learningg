@@ -1,74 +1,52 @@
+.todopic {
+  width: 28px;
+}
 body {
-  margin: 0;
-  background-color: #1a1a1a;
-  color: white;
-
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.box {
-  width: 600px;
-  height: 50px;
-  margin: 10px;
+  background: rgb(107, 216, 249);
   display: flex;
   justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-  background-color: #3333335c;
 }
-
-.inputs{
-  color: white;
-  padding: 10px;
-  font-size: large;
-  width: 155px;
-  font-weight: bold;
-  flex-direction: row;
-}
-
-.btns {
-  width: 100px !important;
-  color: white;
-  font-size: large;
-  
-  
-  
-}
-#btn{
+.heading{
   display: flex;
-  justify-items:start ;
-  width: 600px;
-
-}
-
-.data{
-  flex-direction: row !important;
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  height: 20vh;
-}
-#deltebtn
-{
-  padding: 10px;
-  margin: 10px;
-  border-radius: 20px;
-  color: black;
-  font-size: small;
-  background: white;
-}
-div.deltebtn{
-  display: flex;
-  justify-content:end ;
+  justify-content: center
+  
 }
 button:hover{
   cursor: pointer;
+}
+.box{
+  border:black 2px ;
+  
+display: block;
+width: 89%;
+justify-content: center;
+height: 20px;
+border-radius:20px ;
+padding: 10px;
+margin: 10px;
+}
+.inputbox{
+  margin-left: 60px;
+  width: 450px;
+}
+.IN{
+  border-radius: 20px;
+  width: 250px;
+}
+button{
+  border-radius:20px ;
+  margin-left: 20px;
+}
+div.deltebtn{
+ justify-content: center;
+  color: rgb(90, 90, 205);
+
+}
+div.container{
+  display: block;
+  justify-content: center;
+  height: 550px;
+  width: 500px;
+  background-color: aliceblue;
+  border-radius:20px ;
 }
