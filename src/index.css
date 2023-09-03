@@ -1,52 +1,78 @@
-.todopic {
-  width: 28px;
-}
 body {
-  background: rgb(107, 216, 249);
-  display: flex;
-  justify-content: center;
+    background-color: white;
+    display: flex;
+    background-image: url(https://miro.medium.com/v2/resize:fit:5120/1*GsImz-edoeuqCMfKxDus0w.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
 }
-.heading{
-  display: flex;
-  justify-content: center
-  
+
+.search-bar {
+    padding: 10px;
+    margin: 10px;
+    border-color: rgb(19, 66, 120);
+    border-radius: 20px;
+    width: 350px;
+    height: 25px;
 }
-button:hover{
-  cursor: pointer;
+
+.searchbar {
+    height: 25px;
+    padding: 1px;
+    width: 25px;
+    justify-content: center;
+    border-radius: 100px;
 }
-.box{
-  border:black 2px ;
-  
-display: block;
-width: 89%;
-justify-content: center;
-height: 20px;
-border-radius:20px ;
-padding: 10px;
-margin: 10px;
+
+button:hover {
+    cursor: pointer;
 }
-.inputbox{
-  margin-left: 60px;
-  width: 450px;
-}
-.IN{
-  border-radius: 20px;
-  width: 250px;
-}
-button{
-  border-radius:20px ;
-  margin-left: 20px;
-}
-div.deltebtn{
- justify-content: center;
-  color: rgb(90, 90, 205);
+
+.main {
+    display: grid;
+    padding: 10px;
+    justify-content: center;
+    height: 520px;
+    border: solid;
+    background-color: rgba(106, 180, 249, 0.532);
+    width: 370px;
+
+    border-radius: 20px;
+    border-color: rgba(90, 172, 249, 0);
 
 }
-div.container{
-  display: block;
-  justify-content: center;
-  height: 550px;
-  width: 500px;
-  background-color: aliceblue;
-  border-radius:20px ;
+
+.city {
+    font-family: serif;
+    font-size: 45px;
+    width: 150px;
+    margin-top: 0px ;
+    margin-bottom: 0px;
+    padding: 0;
+    height: 100px;
+    justify-self: center;
+    color: rgb(54, 62, 180);
+    text-shadow: 1px 1px 2px rgb(245, 241, 241);
+    ;
+}
+
+.main-text {
+    display: grid;
+    justify-self: center;
+}
+
+.temp {
+    font-family: serif;
+    font-size: 30px;
+    display: grid;
+    justify-self: center;
+    color: rgb(245, 241, 241);
+    text-shadow: 1px 1px 2px rgb(54, 62, 180);
+    ;
+}
+
+.w-img {
+    height: 200px;
+    padding: 60px;
+    width: 200px;
 }
